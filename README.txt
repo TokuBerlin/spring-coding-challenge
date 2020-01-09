@@ -2,8 +2,7 @@ Lösung für Coding Challenge für SPRING Axel Springer Digital News Media GmbH 
 
 Aufgabenstellung:
 
-# Wordpress Coding - Challenge
-"Books"
+# Wordpress Coding - Challenge "Books"
 
 Wordpress Plugin "Books"
 
@@ -21,6 +20,7 @@ Wordpress Plugin "Books"
         *  you can delete a book
         *  you can search for a book
         * suported/displayed fields are: title, editor, author
+
 * Plugin Import Books
     * create a menu item import under the parent Books menu item (Books -> Import)
     * a json file can be imported via an upload field
@@ -28,7 +28,6 @@ Wordpress Plugin "Books"
         * Display how many books were added and updated
     * create a menu item export under the parent Books menu item
         * export all books as json
-
 
 * Frontend
     * Display a list of all Books
