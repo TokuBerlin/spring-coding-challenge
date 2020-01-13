@@ -49,3 +49,10 @@ usage:
 ------
 connect to http://127.0.0.1:8181 (normal user)
 or http://127.0.0.1:8181/wp-admin/index.php (admin, credentials: toku/toku)
+
+
+cleanup:
+-------
+1. docker-compose down
+2. delete data-folder
+
