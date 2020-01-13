@@ -1,8 +1,8 @@
 Lösung für Coding Challenge für SPRING Axel Springer Digital News Media GmbH & Co. KG
+Wordpress Coding - Challenge "Books"
 
 Aufgabenstellung:
-
-# Wordpress Coding - Challenge "Books"
+-----------------
 
 Wordpress Plugin "Books"
 
@@ -32,3 +32,20 @@ Wordpress Plugin "Books"
 * Frontend
     * Display a list of all Books
     * Display a single Book
+
+
+
+setup instructions:
+-------------------
+
+1. copy files to working directory
+2. docker-compose up -d
+3. cat toku_db_backup.sql | docker exec -i docker_db_1 /usr/bin/mysql -u root --password=somewordpress wordpress
+4. cp functions.php ./data/wp/themes/twentytwenty
+5. cp ./tokubooksplugin/tokubooksplugin.php ./data/wp/plugins/tokubooksplugin
+
+
+usage:
+------
+connect to http://127.0.0.1:8181 (normal user)
+or http://127.0.0.1:8181/wp-admin/index.php (admin, credentials: toku/toku)

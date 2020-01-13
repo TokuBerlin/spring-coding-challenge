@@ -800,51 +800,51 @@ add_action('init', 'create_toku_posttype', 0);
 
 
 // modify the main query object
-function toku_mainquery( $query )
-{
-	// only on the homepage
-	if( $query->is_home() && $query->is_main_query() )
-	{
-		$query->set('p', 11);
-		$query->set('post_type', 'book');
-//		$query->query_vars["post_type"]             = "book";
-//		$query->query_vars["author_name"]           = "toku";
-//		$query->query_vars["posts_per_page"]        = 5;
-	}
-}
+//function toku_mainquery( $query )
+//{
+//	// only on the homepage
+//	if( $query->is_home() && $query->is_main_query() )
+//	{
+//		$query->set('p', 11);
+//		$query->set('post_type', 'book');
+////		$query->query_vars["post_type"]             = "book";
+////		$query->query_vars["author_name"]           = "toku";
+////		$query->query_vars["posts_per_page"]        = 5;
+//	}
+//}
 //add_action( "pre_get_posts", "toku_mainquery" );
 
-function toku_mainquery2( $query )
-{
-	global $wpdb;
+//function toku_mainquery2( $query )
+//{
+//	global $wpdb;
+//
+//	$postsList = [];
+//	$request = "empty";
+//
+//	if( $query->is_main_query() )
+//	{
+//		$request   = "SELECT ID FROM $wpdb->posts, $wpdb->postmeta";
+//		$request   .= " WHERE post_status='publish' AND post_type='book'";
+//
+//		$postsList = $wpdb->get_results($request, ARRAY_N);
+//		if( $postsList )
+//		{
+//			foreach( $postsList as $thePost )
+//			{
+//				$thePostList[] = $thePost[0];
+//			}
+//
+//			$query->set('post__in', $thePostList);
+//			$query->set('post_type', 'days');
+//
+//			return true;
+//		}
+//	}
+//
+////	print "results:".sizeof($postsList).", ";
+////	print "query: $request<br/>";
+//	return false;
+//}
 
-	$postsList = [];
-	$request = "empty";
-
-	if( $query->is_main_query() )
-	{
-		$request   = "SELECT ID FROM $wpdb->posts, $wpdb->postmeta";
-		$request   .= " WHERE post_status='publish' AND post_type='book'";
-
-		$postsList = $wpdb->get_results($request, ARRAY_N);
-		if( $postsList )
-		{
-			foreach( $postsList as $thePost )
-			{
-				$thePostList[] = $thePost[0];
-			}
-
-			$query->set('post__in', $thePostList);
-			$query->set('post_type', 'days');
-
-			return true;
-		}
-	}
-
-	print "results:".sizeof($postsList).", ";
-	print "query: $request<br/>";
-	return false;
-}
-
-add_action('pre_get_posts', 'toku_mainquery2', 1);
+//add_action('pre_get_posts', 'toku_mainquery2', 1);
 
